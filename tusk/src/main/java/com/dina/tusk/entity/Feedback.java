@@ -15,12 +15,14 @@ public class Feedback {
     private String email;
     private String reg;
     private String code;
+    private String msg;
     private int rating;
 
     public Feedback (){}
-    public Feedback(String name, String email, String reg, String code, int rating) {
+    public Feedback(String name, String email, String msg, String reg, String code, int rating) {
         this.name = name;
         this.email = email;
+        this.msg = msg;
         this.reg = reg;
         this.code = code;
         this.rating = rating;
@@ -66,6 +68,14 @@ public class Feedback {
         this.rating = rating;
     }
 
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
     @Override
     public String toString() {
         return "Feedback{" +
@@ -73,6 +83,7 @@ public class Feedback {
                 ", email='" + email + '\'' +
                 ", reg='" + reg + '\'' +
                 ", code='" + code + '\'' +
+                ", msg='" + msg + '\'' +
                 ", rating=" + rating +
                 '}';
     }
